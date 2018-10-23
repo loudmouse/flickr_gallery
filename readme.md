@@ -1,1 +1,1 @@
-# A image library built with the Flickr API
+# An image library built with the Flickr API
