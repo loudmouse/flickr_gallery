@@ -2,9 +2,6 @@ setTimeout(function() {
 
   if (window.document && document.body) {
 
-
-
-
     // creates a new html element
     function createNode(element) {
         return document.createElement(element);
@@ -47,22 +44,6 @@ setTimeout(function() {
           var photoFarm = photo.farm;
           var photoLink = 'https://farm' + photoFarm + '.staticflickr.com/' + photoServer + '/' + photoId + '_' + photoSecret+ '.jpg';
 
-
-          // var photosArray = photos.photo
-          // photosArray.forEach(function(photo) {
-          //   var photoId = photo.id;
-          //   var photoSecret = photo.secret;
-          //   var photoServer = photo.server;
-          //   var photoFarm = photo.farm;
-          //   var photoLink = 'https://farm' + photoFarm + '.staticflickr.com/' + photoServer + '/' + photoId + '_' + photoSecret+ '.jpg';
-          // });
-          // array1.forEach(function(element) {
-          //   console.log(element);
-          // });
-
-
-
-
           img.src = photoLink;
           // span.innerHTML = `${photo.user.username}`;
 
@@ -76,7 +57,8 @@ setTimeout(function() {
       });
 
     } else {
-      console.log('DOM is not ready!');
+      // notify the user if the DOM hasn't loaded yet. and style it RED.
+      console.log('%c Hey buddy, the DOM is not ready, yet!', "color:red");
     }
 
 },0);
